@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'amiw';
+  public text: String = "szczerozłota myśl";
+  public thoughts: Array<String> = [];
+
+  public addThought(): void {
+    this.thoughts.push(this.text);
+    this.text = "";
+  }
+
+  public removeThought(i): void {
+    this.thoughts.splice(i, 1)
+  }
 }
